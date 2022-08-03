@@ -8,6 +8,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import reactor.core.publisher.Flux;
 
+/**
+ * Class for Credit.
+ */
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,14 +18,14 @@ import reactor.core.publisher.Flux;
 @Document(collection = "credits")
 public class Credit {
 
-    @Id
-    private String creditId;
+  @Id
+  private String creditId;
 
-    private String clientId;
-    private String type;
-    private String maintenance;
-    private String amountLimit;
-    private String payDate;
-    private Flux<Transaction> transactions;
+  private String clientId;
+  private String type;
+  private String maintenance;
+  private String amountLimit;
+  private String payDate;
+  private Flux<Transaction> transactions;
 
 }
